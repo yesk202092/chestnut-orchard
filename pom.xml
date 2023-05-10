@@ -147,6 +147,7 @@
         <module>chestnut-admin</module>
         <module>chestnut-core</module>
         <module>chestnut-common</module>
+        <module>chestnut-app</module>
     </modules>
 
     <build>
