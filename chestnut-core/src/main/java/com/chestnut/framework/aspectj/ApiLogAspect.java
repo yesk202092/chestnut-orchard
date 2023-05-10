@@ -30,14 +30,12 @@ import java.lang.reflect.Method;
 public class ApiLogAspect {
 
 
-
     @Pointcut("@annotation(com.chestnut.common.annotation.ApiLog)")
     private void apiLog() {
     }
 
     /**
      * 在切点之前打印
-     *
      */
     @Before("apiLog()")
     public void doBefore(JoinPoint joinPoint) throws Throwable {
