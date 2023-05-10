@@ -131,13 +131,6 @@ public class BaseController
         return AjaxResult.error(message);
     }
 
-    /**
-     * 返回警告消息
-     */
-    public AjaxResult warn(String message)
-    {
-        return AjaxResult.warn(message);
-    }
 
     /**
      * 响应返回结果
