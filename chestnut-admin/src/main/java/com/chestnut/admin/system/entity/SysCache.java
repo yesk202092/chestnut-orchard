@@ -1,12 +1,14 @@
 package com.chestnut.admin.system.entity;
 
 import com.chestnut.common.utils.StringUtils;
+import lombok.Data;
 
 /**
  * 缓存信息
  * 
  * @author chestnut
  */
+@Data
 public class SysCache
 {
     /** 缓存名称 */
