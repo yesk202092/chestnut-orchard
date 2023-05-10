@@ -23,7 +23,7 @@ import java.util.List;
  * @author chestnut
  */
 @RestController
-@RequestMapping("/mapper/system/dept")
+@RequestMapping("/system/dept")
 public class SysDeptController extends BaseController
 {
     @Autowired

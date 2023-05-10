@@ -22,7 +22,7 @@ import java.util.List;
  * @author chestnut
  */
 @RestController
-@RequestMapping("/mapper/system/menu")
+@RequestMapping("/system/menu")
 public class SysMenuController extends BaseController
 {
     @Autowired

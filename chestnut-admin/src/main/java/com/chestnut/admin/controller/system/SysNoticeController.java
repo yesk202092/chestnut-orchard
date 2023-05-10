@@ -21,7 +21,7 @@ import java.util.List;
  * @author chestnut
  */
 @RestController
-@RequestMapping("/mapper/system/notice")
+@RequestMapping("/system/notice")
 public class SysNoticeController extends BaseController
 {
     @Autowired

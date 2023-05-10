@@ -33,7 +33,7 @@ import java.util.stream.Collectors;
  * @author chestnut
  */
 @RestController
-@RequestMapping("/mapper/system/user")
+@RequestMapping("/system/user")
 public class SysUserController extends BaseController
 {
     @Autowired

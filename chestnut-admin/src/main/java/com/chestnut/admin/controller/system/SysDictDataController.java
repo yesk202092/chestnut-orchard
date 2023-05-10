@@ -26,7 +26,7 @@ import java.util.List;
  * @author chestnut
  */
 @RestController
-@RequestMapping("/mapper/system/dict/data")
+@RequestMapping("/system/dict/data")
 public class SysDictDataController extends BaseController
 {
     @Autowired

@@ -26,7 +26,7 @@ import org.springframework.web.multipart.MultipartFile;
  * @author chestnut
  */
 @RestController
-@RequestMapping("/mapper/system/user/profile")
+@RequestMapping("/system/user/profile")
 public class SysProfileController extends BaseController
 {
     @Autowired

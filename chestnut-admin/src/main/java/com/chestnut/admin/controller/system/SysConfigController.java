@@ -23,7 +23,7 @@ import java.util.List;
  * @author chestnut
  */
 @RestController
-@RequestMapping("/mapper/system/config")
+@RequestMapping("/system/config")
 public class SysConfigController extends BaseController
 {
     @Autowired

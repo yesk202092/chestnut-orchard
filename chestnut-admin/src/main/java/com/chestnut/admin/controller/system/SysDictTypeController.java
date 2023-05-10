@@ -23,7 +23,7 @@ import java.util.List;
  * @author chestnut
  */
 @RestController
-@RequestMapping("/mapper/system/dict/type")
+@RequestMapping("/system/dict/type")
 public class SysDictTypeController extends BaseController
 {
     @Autowired

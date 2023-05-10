@@ -33,7 +33,7 @@ import java.util.List;
  * @author chestnut
  */
 @RestController
-@RequestMapping("/mapper/system/role")
+@RequestMapping("/system/role")
 public class SysRoleController extends BaseController
 {
     @Autowired
