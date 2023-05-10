@@ -16,6 +16,7 @@ server:
 spring:
   application:
     name: chestnut-app
+    author: yesk
   profiles:
     active: dev
   security:

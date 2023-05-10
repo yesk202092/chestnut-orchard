@@ -1,7 +1,7 @@
 # 项目相关配置
 chestnut:
   # 名称
-  name: chestnut
+  name: yesk
   # 版本
   version: 3.8.5
   # 版权年份
@@ -49,6 +49,9 @@ user:
 
 # Spring配置
 spring:
+  application:
+    name: chestnut-admin
+    author: yesk
   # 资源信息
   messages:
     # 国际化资源文件路径

@@ -1,9 +1,8 @@
 package com.chestnut;
 
 
-import com.chestnut.config.AppStartupListener;
+import com.chestnut.common.config.AppStartupListener;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;

@@ -23,10 +23,6 @@ import java.util.Date;
 public class AppStartupListener implements ApplicationRunner {
 
     /**
-     * 团队名称
-     */
-    public static final String TEAM_NAME = "yesk";
-    /**
      * 上下文对象实例
      */
     @Resource
@@ -41,7 +37,7 @@ public class AppStartupListener implements ApplicationRunner {
                     "\tState:\tapp is running\n" +
                     "\tPID:\t{}\n" +
                     "\tDate:\tstarted at {}\n" +
-                    "\tAuth:\t" + TEAM_NAME + "\n" +
+                    "\tAuthor:\t"  + "{}\n" +
                     "\tURLs:\thttp://{}:{}{}\n" +
                     "==============================================================";
 
@@ -58,7 +54,8 @@ public class AppStartupListener implements ApplicationRunner {
         String appHost = InetAddress.getLocalHost().getHostAddress();
         String appPort = ctx.getEnvironment().getProperty("server.port");
         String appPath = ctx.getEnvironment().getProperty("server.servlet.context-path");
+        String author = ctx.getEnvironment().getProperty("spring.application.author");
         String appStartupDate = DateUtil.format(new Date(ctx.getStartupDate()), DatePattern.NORM_DATETIME_MS_PATTERN);
-        log.info(APP_START_INFO, appName, appJvmName.split("@")[0], appStartupDate, appHost, appPort, (appPath == null ? "" : appPath));
+        log.info(APP_START_INFO, appName, appJvmName.split("@")[0], appStartupDate,author, appHost, appPort, (appPath == null ? "" : appPath));
     }
 }
