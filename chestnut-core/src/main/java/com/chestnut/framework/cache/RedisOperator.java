@@ -413,6 +413,22 @@ public class RedisOperator {
         }
     }
 
+    public Boolean lock(String bom,Integer time) {
+        if (redissonClient == null) {
+            log.info("redissonClient is null");
+            return false;
+        }
+        try {
+            RLock rLock = redissonClient.getLock(bom);
+            rLock.lock(time, TimeUnit.SECONDS);
+            log.info("lock success");
+            return true;
+        } catch (Exception e) {
+            log.info("lock fail");
+            return false;
+        }
+    }
+
     public Boolean unlock(String bom) {
         if (redissonClient == null) {
             log.info("redissonClient is null");
