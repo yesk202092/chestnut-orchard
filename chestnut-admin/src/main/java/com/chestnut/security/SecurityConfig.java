@@ -1,5 +1,6 @@
 package com.chestnut.security;
 
+
 import com.chestnut.framework.config.properties.PermitAllUrlProperties;
 import com.chestnut.security.handle.LogoutSuccessHandlerImpl;
 import com.chestnut.security.filter.JwtAuthenticationTokenFilter;
