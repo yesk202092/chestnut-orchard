@@ -1,0 +1,95 @@
+spring:
+  datasource:
+    name: mysql_test
+    type: com.alibaba.druid.pool.DruidDataSource
+    #druid相关配置
+    druid:
+      #监控统计拦截的filters
+      filters: stat
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      # 主库数据源
+      master:
+        url: jdbc:mysql://127.0.0.1:3306/chestnut?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+        username: root
+        password: 123456
+      # 从库数据源
+      slave:
+        # 从数据源开关/默认关闭
+        enabled: false
+        url:
+        username:
+        password:
+      #配置初始化大小/最小/最大
+      initial-size: 1
+      min-idle: 1
+      max-active: 20
+      #获取连接等待超时时间
+      max-wait: 60000
+      # 配置连接超时时间
+      connect-timeout: 30000
+      # 配置网络超时时间
+      socket-timeout: 60000
+      #间隔多久进行一次检测，检测需要关闭的空闲连接
+      time-between-eviction-runs-millis: 60000
+      #一个连接在池中最小生存的时间
+      min-evictable-idle-time-millis: 300000
+      # 配置一个连接在池中最大生存的时间，单位是毫秒
+      max-evictable-idle-timeMillis: 900000
+      # 配置检测连接是否有效
+      validation-query: SELECT 'x'
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      #打开PSCache，并指定每个连接上PSCache的大小。oracle设为true，mysql设为false。分库分表较多推荐设置为false
+      pool-prepared-statements: false
+      max-pool-prepared-statement-per-connection-size: 20
+
+  #redis相关配置
+  redis:
+    database: 0
+    host: 127.0.0.1
+    # 端口，默认为6379
+    port: 6379
+    password: 123456
+    lettuce:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 5
+        min-idle: 0
+      shutdown-timeout: 1000
+    timeout: 5000
+    spring:
+      jackson:
+        date-format: yyyy-MM-dd HH:mm:ss
+        time-zone: GMT+8
+  #  kafka:
+  #    bootstrap-servers: 172.31.209.90:9092 #(kafka生产集群ip+port端口)
+  #    producer:
+  #      buffer-memory: 40960
+  #      retries: 0
+  #      batch-size: 4096
+  #      properties:
+  #        linger.ms: 1
+  #    consumer:
+  #      enable-auto-commit: true #(是否自动提交)
+  #      auto-commit-interval: 100ms
+  #      auto-offset-reset: latest #(实时生产，实时消费，不会从头开始消费)
+  #      group-id: test #(消费组)
+  #      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+  #      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+  servlet:
+    multipart:
+      max-request-size: 100MB
+
+############### mybatis-plus配置 ###############
+mybatis-plus:
+  configuration:
+    # 这个配置会将执行的sql打印出来，在开发或测试的时候可以用
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+code:
+  captchaType: math
+aes:
+  sKey: ysk
+  ivStr: fruit
+

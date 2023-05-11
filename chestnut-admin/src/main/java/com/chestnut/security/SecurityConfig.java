@@ -1,10 +1,10 @@
 package com.chestnut.security;
 
 
+import com.chestnut.common.filter.AuthenticationEntryPointImpl;
 import com.chestnut.framework.config.properties.PermitAllUrlProperties;
 import com.chestnut.security.handle.LogoutSuccessHandlerImpl;
 import com.chestnut.security.filter.JwtAuthenticationTokenFilter;
-import com.chestnut.security.handle.AuthenticationEntryPointImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpMethod;

@@ -6,9 +6,5 @@
     <file url="file://$PROJECT_DIR$/chestnut-app/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chestnut-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chestnut-core/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/com.chestnut/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../maven/repository/org/springframework/boot/spring-boot-starter-parent/2.5.12/src/main/resources" charset="UTF-8" />
   </component>
 </project>

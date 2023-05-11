@@ -6,7 +6,7 @@ spring:
         druid:
             # 主库数据源
             master:
-                url: jdbc:mysql://192.168.0.50:6033/rouyi-vue?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+                url: jdbc:mysql://127.0.0.1:3306/chestnut?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
                 username: root
                 password: 123456
             # 从库数据源
@@ -17,28 +17,28 @@ spring:
                 username: 
                 password: 
             # 初始连接数
-            initialSize: 5
+            initial-size: 5
             # 最小连接池数量
-            minIdle: 10
+            min-idle: 10
             # 最大连接池数量
-            maxActive: 20
+            max-active: 20
             # 配置获取连接等待超时的时间
-            maxWait: 60000
+            max-wait: 60000
             # 配置连接超时时间
-            connectTimeout: 30000
+            connect-timeout: 30000
             # 配置网络超时时间
-            socketTimeout: 60000
+            socket-timeout: 60000
             # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
-            timeBetweenEvictionRunsMillis: 60000
+            time-between-eviction-runs-millis: 60000
             # 配置一个连接在池中最小生存的时间，单位是毫秒
-            minEvictableIdleTimeMillis: 300000
+            min-evictable-idle-time-millis: 300000
             # 配置一个连接在池中最大生存的时间，单位是毫秒
-            maxEvictableIdleTimeMillis: 900000
+            max-evictable-idle-timeMillis: 900000
             # 配置检测连接是否有效
-            validationQuery: SELECT 1 FROM DUAL
-            testWhileIdle: true
-            testOnBorrow: false
-            testOnReturn: false
+            validation-query: SELECT 1 FROM DUAL
+            test-while-idle: true
+            test-on-borrow: false
+            test-on-return: false
             webStatFilter: 
                 enabled: true
             statViewServlet:
@@ -59,3 +59,25 @@ spring:
                 wall:
                     config:
                         multi-statement-allow: true
+    # redis 配置
+    redis:
+        # 地址.
+        host: 127.0.0.1
+        # 端口，默认为6379
+        port: 6379
+        # 数据库索引
+        database: 0
+        # 密码
+        password: 123456
+        # 连接超时时间
+        timeout: 5000
+        lettuce:
+            pool:
+                # 连接池中的最小空闲连接
+                min-idle: 0
+                # 连接池中的最大空闲连接
+                max-idle: 8
+                # 连接池的最大数据库连接数
+                max-active: 8
+                # #连接池最大阻塞等待时间（使用负值表示没有限制）
+                max-wait: -1ms
