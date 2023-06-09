@@ -16,7 +16,7 @@ import com.chestnut.common.annotation.Log;
 import com.chestnut.common.core.controller.BaseController;
 import com.chestnut.common.core.domain.AjaxResult;
 import com.chestnut.common.enums.BusinessType;
-import ${packageName}.domain.${ClassName};
+import ${packageName}.entity.${ClassName};
 import ${packageName}.service.I${ClassName}Service;
 import com.chestnut.common.utils.poi.ExcelUtil;
 #if($table.crud || $table.sub)
