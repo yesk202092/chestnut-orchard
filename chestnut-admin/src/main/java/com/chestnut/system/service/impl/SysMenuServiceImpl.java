@@ -62,12 +62,9 @@ public class SysMenuServiceImpl implements ISysMenuService
     {
         List<SysMenu> menuList = null;
         // 管理员显示所有菜单信息
-        if (SysUser.isAdmin(userId))
-        {
+        if (SysUser.isAdmin(userId)) {
             menuList = menuMapper.selectMenuList(menu);
-        }
-        else
-        {
+        } else {
             menu.getParams().put("userId", userId);
             menuList = menuMapper.selectMenuListByUserId(menu);
         }
@@ -219,18 +216,15 @@ public class SysMenuServiceImpl implements ISysMenuService
     {
         List<SysMenu> returnList = new ArrayList<SysMenu>();
         List<Long> tempList = menus.stream().map(SysMenu::getMenuId).collect(Collectors.toList());
-        for (Iterator<SysMenu> iterator = menus.iterator(); iterator.hasNext();)
-        {
+        for (Iterator<SysMenu> iterator = menus.iterator(); iterator.hasNext(); ) {
             SysMenu menu = (SysMenu) iterator.next();
             // 如果是顶级节点, 遍历该父节点的所有子节点
-            if (!tempList.contains(menu.getParentId()))
-            {
+            if (!tempList.contains(menu.getParentId())) {
                 recursionFn(menus, menu);
                 returnList.add(menu);
             }
         }
-        if (returnList.isEmpty())
-        {
+        if (returnList.isEmpty()) {
             returnList = menus;
         }
         return returnList;
